@@ -4,8 +4,9 @@ Automake, Cmake etc are very strong. Why I write *EMF*? Because Automake,
 Cmake etc have their own language to output Makefile. In order to handle
 such popular tool, user have to understand the language and Makefile. But
 *EMF*, you only need to know *Makefile*, and generally, you only need to
-customize config.mk
+customize config.mk.
 
+*EMF* was extracted from [Tea](https://github.com/butterflyfish/tea).
 
 # How to use
 
