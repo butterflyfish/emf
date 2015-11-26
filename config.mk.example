@@ -1,0 +1,51 @@
+# This configuration file tell EMF how to produce target files and it's parsed by
+# Make. So you can add own make expressions here to enhance/extend functionality.
+
+
+# comment out blow lines to add your own global flags for compiler and preprocessor
+# CFLAGS   :=
+# CPPFLAGS :=
+
+
+
+# BIN:
+# list of executable utilities with delimeter SPACE
+#
+# b_SRC:
+# b represent name of one BIN. b_SRC accept source file list and/or source
+# directory list. EMF will scan source files under directroy list, and then
+# use all files to produce BIN b
+#
+# b_LIBAR:
+# b represent name of one BIN. b_LIBAR is archive list with delimeter SPACE also,
+# and it indicates the BIN b depends on these archive
+#
+# b_CFLAGS & b_CPPFLAGS:
+# specific flags for BIN b
+#
+# comment out below lines to tell EMF how to produce BIN
+# BIN :=
+# _SRC   :=
+# _LIBAR :=
+# _CFLAGS :=
+# _CPPLAGS :=
+
+
+
+# LIBAR:
+# list of archive with delimeter SPACE
+#
+# a_SRC:
+# a represent name of one archive. It accepts source file list and/or source
+# directory list. EMF will scan source files under directory list, and then
+# use all files to produce archive a
+#
+# a_CFLAGS & a_CPPFLAGS:
+# specific flags for archive a
+#
+# comment out below files to tell EMF how to build archives
+# LIBAR :=
+# _SRC :=
+# _CFLAGS :=
+# _CPPLAGS :=
+
