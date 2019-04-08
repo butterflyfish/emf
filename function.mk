@@ -42,8 +42,8 @@ endef
 # $(call export_compile_command,how_to_cc,src)
 export_compile_command = \
 echo "    {"  >> $(OBJDIR)/$(basename $2).json;  \
-echo "        \"command\": \"$1\"," >> $(OBJDIR)/$(basename $2).json;  \
 echo "        \"directory\": \"$(PWD)\"," >> $(OBJDIR)/$(basename $2).json; \
+echo "        \"command\": \"$1\"," >> $(OBJDIR)/$(basename $2).json;  \
 echo "        \"file\": \"$(PWD)/$2\"" >> $(OBJDIR)/$(basename $2).json;  \
 echo "    }," >> $(OBJDIR)/$(basename $2).json
 
@@ -55,7 +55,9 @@ endif
 # generate JSON Compilation Database
 # please refer to http://clang.llvm.org/docs/JSONCompilationDatabase.html
 define generate-cc-db
-echo "[" > $(CCDB); \
-find $(OBJDIR) -type f -iname "*.json"|xargs cat >> $(CCDB) ;\
+echo "[" > $(CCDB).x; \
+find $(OBJDIR) -type f -iname "*.json"|xargs cat >> $(CCDB).x ;\
+sed '$$s|,||' $(CCDB).x > $(CCDB)  ;\
 echo "]" >> $(CCDB)
+$(quiet)$(RM) $(CCDB).x
 endef
