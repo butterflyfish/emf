@@ -65,7 +65,7 @@ INSTALLDIRS := $(patsubst $(BUILDIR)/%,%,$(wildcard $(BUILDIR)/$(INSTALLDIRS)))
 
 
 # JSON Compilation Database
-CCDB := $(BUILDIR)/compile_commands.json
+CCDB := compile_commands.json
 
 
 # utility variables

@@ -109,3 +109,4 @@ endif
 
 clean:
 	$(quiet)$(RM) $(BUILDIR)
+	$(quiet)$(RM) $(CCDB)
